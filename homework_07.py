@@ -6,7 +6,7 @@ array1 = np.array([[10, 8], [3, 5]])
 array_inv = np.linalg.inv(array1)
 print(array_inv)
 #乘上原矩陣
-ans = array1 @ array_inv
+ans = np.dot(array_inv,array1)
 print(ans) #是為單位矩陣
 
 #運用上列array計算特徵值、特徵向量?
