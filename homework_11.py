@@ -5,7 +5,8 @@
 import pandas as pd 
 q_df = pd.DataFrame([['male', 'teacher'], ['male', 'engineer'], ['female', None], ['female', 'engineer']],columns=['Sex','Profession'])
 #print(q_df)
-q_df['Profession'] = q_df['Profession'].fillna('others')
+#q_df['Profession'] = q_df['Profession'].fillna('others') 這個方法也可以
+q_df = q_df.fillna('others')
 #print(q_df)
 pf1 = pd.get_dummies(q_df[['Sex']])
 print(pf1)
